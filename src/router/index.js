@@ -1,25 +1,41 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import MainLayout from '@/views/MainLayout.vue'
-import Login from '@/views/Login.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Login from '../views/Login.vue';
+import OrganizerDashboard from '../views/OrganizerDashboard.vue';
+import TrainerDashboard from '../views/TrainerDashboard.vue';
+import JudgeDashboard from '../views/JudgeDashboard.vue';
+import HostDashboard from '../views/HostDashboard.vue';
 
 const routes = [
   {
-    path: '/login',
-    name: 'Login',
-    component: Login
-  },
-
-  {
     path: '/',
-    name: 'MainLayout',
-    component: MainLayout
+    name: 'Login',
+    component: Login,
   },
- 
-]
+  {
+    path: '/organizer',
+    name: 'OrganizerDashboard',
+    component: OrganizerDashboard,
+  },
+  {
+    path: '/trainer',
+    name: 'TrainerDashboard',
+    component: TrainerDashboard,
+  },
+  {
+    path: '/judge',
+    name: 'JudgeDashboard',
+    component: JudgeDashboard,
+  },
+  {
+    path: '/host',
+    name: 'HostDashboard',
+    component: HostDashboard,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

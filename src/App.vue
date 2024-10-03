@@ -1,19 +1,24 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> 
-   
-  </nav>
-  <router-view/>
+ <div id="app">
+    <div class="page-container">
+      <router-view />
+    </div>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
 }
+</script>
+<style lang="sass">  
+#app
+ 
 
 
 </style>
